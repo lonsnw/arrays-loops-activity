@@ -14,6 +14,18 @@
 // 3. painting
 // Total hobbies: 3
 
+let hobbies = [`hockey`, `basketball`, `coding`];
+
+for (let hobby of hobbies){
+     console.log(hobby);
+}
+
+for (let i = 0; i < hobbies.length; i ++){
+     console.log(`hobby`, hobbies[i]);
+}
+
+console.log(hobbies.length);
+
 /**
  * #2 Colors
  * ---------
@@ -29,7 +41,16 @@
 // Example output
 // green, red, teal, orange, teal
 // Teal was found 2 times
+let colors = [`blue`, `green`, `red`, `purple`, `teal`, `teal`, `teal`]
+let tealCount = 0
 
+for (let color of colors){
+     if(color===`teal`){
+          tealCount++;
+     }
+     else{}
+}
+console.log(`i am counting teals`, tealCount);
 
 /**
  * #3 Even & Odd
@@ -47,6 +68,21 @@
 // Odd 3, 7, 11
 // Even 2, 8, 4, 2
 
+let numbers = [34, 57, 129, 75, 9, 82]
+
+let oddNumbers = []
+let evenNumbers = []
+
+for(let number of numbers){
+     if(number%2===0){
+          evenNumbers.push(number);
+     }
+     else{
+          oddNumbers.push(number);
+     }
+}
+console.log(`evens`, evenNumbers);
+console.log(`odds`, oddNumbers);
 
 /**
  * #4 Flipping Switches
@@ -61,6 +97,31 @@
 // Example output
 // true, false, true, true
 // Toggled false, true, false, false
+
+let booleans = [true, false, true, false, false, true, true]
+let toggled = []
+
+// for(let boolean of booleans){
+//      if(boolean===true){
+//           toggled.push(false)
+//      }
+//      else{
+//           toggled.push(true)
+//      }
+//      console.log(`booleans`, booleans);
+//      console.log(toggled);
+// }
+
+for(let i=0; i<booleans.length; i++){
+     if(booleans[i]===true){
+          toggled.push(false)
+     }
+     else{
+          toggled.push(true)
+     }
+}
+console.log(`booleans`, booleans);
+console.log(`toggled`, toggled);
 
 
 /**
@@ -80,6 +141,16 @@
 // Before loop 3, 0, 2, 8, 0, 0, 0
 // After loop 3, 0, 2, 8
 
+let zeros = [6, 3, 7, 0, 8, 0, 0, 0, 0]
+
+console.log(zeros);
+while(zeros.length>0 && zeros[zeros.length-1]===0){
+//for as long as there are numbers in the array
+//and if the number at the end of the array is 0
+     zeros.pop()
+//pop it
+}
+console.log(zeros);
 
 /**
  * #6 (STRETCH) Highest & Lowest
