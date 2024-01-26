@@ -167,3 +167,26 @@ console.log(zeros);
 // 2, 2, -3, 7, 4, 1, 7, 12, 8
 // High: 12
 // Low: -3
+
+let largish = [2, 2, 7, 4, 1, 7, 12, -7, 8, 6, 7, 19, 12]
+let high = largish.length
+let low = largish.length
+
+for(let i of largish){
+     if(i > high){
+          high = i;
+     }
+     if(i < low){
+          low = i;
+     }
+}
+
+//if you use an actual value for the high and low variables, 
+//then this doesn't work if there aren't negative numbers; it just gives 0
+//not sure how to fix it
+
+console.log(`low`, low);
+console.log(`high`, high)
+
+let highWhile = 0
+let lowWhile = 0
